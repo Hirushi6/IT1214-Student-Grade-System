@@ -40,3 +40,25 @@ class Student {
         System.out.println(id + " \t\t " + name + " \t\t "+marks+"\t\t\t"+calculateGrade());
     }
 }
+public class StudentGradeSystem {
+    public static void main(String args[]) {
+        ArrayList<Student> studentList = new ArrayList<>();
+        Scanner sc= new Scanner(System.in);
+        
+        System.out.println("=== Student Grade Management System ===");
+        
+        while (true) {
+			System.out.println(" ");
+            System.out.println("1. Add Student");
+            System.out.println("2. Display All Students");
+            System.out.println("3. Search Student by ID");
+            System.out.println("4. Display Average Mark");
+            System.out.println("5. Exit");
+            System.out.print("Enter your choice (1-5): ");
+            
+            int choice = sc.nextInt();
+            sc.nextLine();
+		}
+        sc.close();
+    }
+}
