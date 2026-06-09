@@ -121,7 +121,25 @@ public class StudentGradeSystem {
                     }
                 }
                 
-            } 	
+            }
+
+				else if (choice == 4) {
+                
+                if (studentList.isEmpty()) {
+                    System.out.println("No records to calculate average.");
+                } 
+				else {
+                    double total = 0;
+                    for (Student s : studentList) {
+                        total += s.getMarks();
+                    }
+                    double average = total / studentList.size();
+                    double roundedAverage = Math.round(average*100.0)/100.0;
+                    System.out.println("Total Students: "+ studentList.size());
+                    System.out.println("Average Mark of All Students: "+roundedAverage);
+                }
+                
+            } 
 		}
         sc.close();
     }
