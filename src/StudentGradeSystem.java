@@ -78,6 +78,22 @@ public class StudentGradeSystem {
                 }
                 
             } 
+			
+			else if (choice == 2) {
+                if (studentList.isEmpty()) {
+                    System.out.println("No student records found.");
+                } 
+				else {
+                    System.out.println(" ");
+                    System.out.println("ID: \t\t\t Name: \t\t\t\t Marks: \t\tGrade: ");
+                    System.out.println(" ");
+                    for (Student s : studentList) {
+                        s.displayStudentDetails();
+                    }
+                    System.out.println(" ");
+                }
+                
+            } 
 		}
         sc.close();
     }
