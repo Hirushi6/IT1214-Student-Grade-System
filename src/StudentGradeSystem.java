@@ -140,6 +140,14 @@ public class StudentGradeSystem {
                 }
                 
             } 
+			
+			else if (choice == 5) {
+                System.out.println("Exiting program. Progress saved!");
+                break;
+            } 
+			else {
+                System.out.println("Invalid choice! Please select 1-5.");
+            }
 		}
         sc.close();
     }
