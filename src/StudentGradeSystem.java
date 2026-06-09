@@ -93,7 +93,35 @@ public class StudentGradeSystem {
                     System.out.println(" ");
                 }
                 
-            } 
+            }
+
+			else if (choice == 3) {
+                
+                if (studentList.isEmpty()) {
+                    System.out.println("No student records found.");
+                } 
+				else {
+                    System.out.print("Enter Student ID to Search: ");
+                    String searchId = sc.nextLine();
+                    boolean found = false;
+                    
+                    for (Student s : studentList) {
+                        if (s.getId().equalsIgnoreCase(searchId)) {
+							System.out.println(" ");
+                            System.out.println("Student Found:");
+                            System.out.println("ID: " + s.getId());
+                            System.out.println("Name: " + s.getName());
+                            System.out.println("Marks: " + s.getMarks());
+                            found = true;
+                            break;
+                        }
+                    }
+                    if (!found) {
+                        System.out.println("Student with ID " + searchId + " not found.");
+                    }
+                }
+                
+            } 	
 		}
         sc.close();
     }
