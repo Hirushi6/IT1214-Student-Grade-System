@@ -58,6 +58,26 @@ public class StudentGradeSystem {
             
             int choice = sc.nextInt();
             sc.nextLine();
+			
+			 if (choice == 1) {
+                System.out.print("Enter Student ID: ");
+                String id = sc.nextLine();
+                
+                System.out.print("Enter Student Name: ");
+                String name = sc.nextLine();
+                
+                System.out.print("Enter Marks: ");
+                double marks = sc.nextDouble();
+                
+                if (marks < 0 || marks > 100) {
+                    System.out.println("Invalid marks! Please enter between 0 and 100.");
+                } 
+				else {
+                    studentList.add(new Student(id, name, marks));
+                    System.out.println("Student added successfully!");
+                }
+                
+            } 
 		}
         sc.close();
     }
